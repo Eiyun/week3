@@ -1,10 +1,10 @@
 const https = require('https');
 const JSSoup = require('jssoup').default;
 const fs = require('fs');
-const url = 'https://en.wikipedia.org/wiki/Pattern';
+const url = 'https://en.wikipedia.org/wiki/Greenhouse_gas_emissions';
 const jsonPath = "./json/"; 
 const imagePath = "./images/"; 
-const name = "Pattern";
+const name = "The main sources";
 
 
 /*
@@ -46,7 +46,6 @@ function getAllExternalLinks(soupTag){
     return links;
 }
 
-//returns array of strings, one string for each paragraph
 function getParagraphs(soupTag){
     let paragraphs = soupTag.findAll('p');
     let paragraphsText = [];
